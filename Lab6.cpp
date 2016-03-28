@@ -1,5 +1,5 @@
 // Lab6.cpp : Defines the entry point for the console application.
-//
+// AUTHOR Duncan Reeves, A-3
 
 #include "stdafx.h"
 #include <iostream>
@@ -32,16 +32,12 @@ void reverser(char* pointer)
 	{
 		pointerStart = (pointer + i);
 		PointerLast = (pointer + numOfChar) - i;
-
-
 		temp = *pointerStart;
 
-		cout << "Work 3.2" << endl;;
 		*pointerStart = temp;
-		cout << "Work 3.21" << endl;
 
 		*pointerStart = *PointerLast;
-		cout << "Work 3.3" << endl;
+
 		*PointerLast = temp;
 	}
 }
@@ -49,8 +45,8 @@ void reverser(char* pointer)
 int main()
 {
 	/// declare a c-string to reverse
-	//char myString[] = "Hello world!";
-	char *myString = "Hello world!";
+	char myString[] = "Hello world!";
+	//char *myString = "Hello world!";
 
 	/// call the reverser function
 	reverser(myString);
